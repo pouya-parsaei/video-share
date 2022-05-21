@@ -26,6 +26,6 @@ class SendEmail
      */
     public function handle(VideoCreated $event)
     {
-        dump('Send Email Listener');
+
     }
 }

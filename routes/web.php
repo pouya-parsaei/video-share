@@ -110,3 +110,8 @@ Route::get('/duration',function(){
 
     dd($duration);
 });
+
+Route::get('/test',function(){
+    $user = User::first();
+    $user->notify(new \App\Notifications\TestNotification());
+});
