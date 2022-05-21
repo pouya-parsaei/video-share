@@ -15,7 +15,7 @@ class RelatedVideos extends Component
      */
     public function __construct(Video $video)
     {
-        $this->videos = $video->getRelatedVideos();
+        $this->videos = $video->getRelatedVideos()->load('user');
     }
 
     /**

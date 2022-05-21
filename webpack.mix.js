@@ -22,8 +22,19 @@ mix.js([
     'resources/js/custom.js',
     'resources/js/bootstrap.min.js',
     'resources/js/imagesloaded.pkgd.min.js',
-    'resources/js/grid-blog.min.js'
-],'public/js/main.js');
+    'resources/js/grid-blog.min.js',
+    'resources/js/index/logout.js'
+], 'public/js/main.js');
+
+mix.js('resources/js/app.js', 'public/js').postCss('resources/css/app.css', 'public/css', [
+    require('postcss-import'),
+    require('tailwindcss'),
+    require('autoprefixer'),
+]);
+
+mix.js([
+    'resources/js/videos/show.js'
+], 'public/js/show.js');
 
 mix.copyDirectory('resources/css/fonts', 'public/css/fonts')
-mix.copyDirectory('resources/img','public/img');
+mix.copyDirectory('resources/img', 'public/img');

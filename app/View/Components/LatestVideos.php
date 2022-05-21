@@ -16,7 +16,7 @@ class LatestVideos extends Component
      */
     public function __construct()
     {
-        $this->videos = Video::latest()->with('category')->take(6)->get();
+        $this->videos = Video::latest()->with(['category','user'])->take(6)->get();
     }
 
     /**
